@@ -20,6 +20,8 @@
 
 ![1697340323360](image/readme/1697340323360.png)
 
+上图中对应主机的硬盘阵列的最大写入速度约40GB/s（使用CrystalDiskMark软件）
+
 ### 环境需求
 
 > QT5及以上
@@ -32,6 +34,7 @@
 
 * Q：代码编译时报错buffer[chunkSize];的大小不是常数。
 * A：数组的大小需要在运行时确定，可以使用动态内存分配和指针来创建数组。
+
 ```
 char* buffer = new char[chunkSize]; // 使用 new 动态分配内存
 // 使用 buffer 进行工作

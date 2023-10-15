@@ -7,7 +7,7 @@
 #include <QMutex>
 #include <QDataStream>
 #include <windows.h>
-#include "multi_process.h"
+#include "multi_thread.h"
 
 double write_using_textstream_to_file()
 {

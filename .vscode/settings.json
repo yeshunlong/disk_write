@@ -1,0 +1,6 @@
+{
+    "qtConfigure.qtKitDir": "c:/Qt/Qt5.12.11/5.12.11/msvc2017_64",
+    "files.associations": {
+        "format": "cpp"
+    }
+}

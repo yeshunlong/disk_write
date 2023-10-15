@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "qt",
+            "includePath": [
+                "c:/Qt/Qt5.12.11/5.12.11/msvc2017_64/include/**",
+                "${workspaceRoot}/**",
+                "C:/Qt/Qt5.12.11/5.12.11/msvc2017_64/include/QtCore"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

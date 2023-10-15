@@ -18,9 +18,36 @@
 
 ### 测试效果
 
+下图中对应主机的硬盘阵列的最大串行写入速度约40GB/s（使用CrystalDiskMark软件）
+
+四个线程
+
 ![1697340323360](image/readme/1697340323360.png)
 
-上图中对应主机的硬盘阵列的最大写入速度约40GB/s（使用CrystalDiskMark软件）
+十二个线程
+
+![](file:///C:\Users\HUAWEI\AppData\Local\Temp\ksohtml12676\wps1.jpg)![1697341752756](image/readme/1697341752756.png)
+
+十六个线程
+
+![](file:///C:\Users\HUAWEI\AppData\Local\Temp\ksohtml12676\wps2.jpg)![1697341745149](image/readme/1697341745149.png)
+
+三十二个线程
+
+![](file:///C:\Users\HUAWEI\AppData\Local\Temp\ksohtml12676\wps3.jpg)![1697341763681](image/readme/1697341763681.png)
+
+六十四个线程
+
+![](file:///C:\Users\HUAWEI\AppData\Local\Temp\ksohtml12676\wps4.jpg)![1697341768453](image/readme/1697341768453.png)
+
+一百二十八个线程
+
+![](file:///C:\Users\HUAWEI\AppData\Local\Temp\ksohtml12676\wps5.jpg)![1697341772940](image/readme/1697341772940.png)
+
+### **结论**
+
+* 不使用多线程写入的方法中，基于流（Stream）的方法速度远低于基于系统调用（fwrite或者writefile）的速度。
+* 使用多线程写入的方法中，写入速度和线程数呈现「先正相关后负相关」的关系，并且峰值写入速度大概在磁盘阵列的最大串行写入速度的2~3倍左右。
 
 ### 环境需求
 

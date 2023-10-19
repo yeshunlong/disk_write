@@ -23,11 +23,11 @@ protected:
             QByteArray buffer(1024 * 1024, 'A'); // Adjust the buffer size as needed
             qint64 bytesWritten = 0;
 
-            for (qint64 i = startPosition; i < dataSize; i += buffer.size())
+            for (qint64 i = 0; i < dataSize; i += buffer.size())
             {
                 qint64 bytesToWrite = qMin(static_cast<qint64>(buffer.size()), dataSize - i);
 
-                file.seek(i);
+                file.seek(startPosition + i);
                 qint64 bytesWrittenThisIteration = file.write(buffer, bytesToWrite);
                 if (bytesWrittenThisIteration == -1)
                 {
